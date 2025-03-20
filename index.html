@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Análise de Dados com Python</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function abrirColab() {
+            let width = screen.width / 2;  // Divide a tela ao meio
+            let height = screen.height;
+            let left = 0;
+            let top = 0;
+            
+            // Abrir Colab no lado direito
+            let colabWindow = window.open("https://colab.research.google.com/", "_blank", 
+                `width=${width}, height=${height}, top=${top}, left=${screen.width - width}, resizable=yes, scrollbars=yes`);
+            
+            // Ajustar a tela atual para ocupar o lado esquerdo (opcional)
+            window.resizeTo(width, height);
+            window.moveTo(left, top);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -20,12 +36,9 @@
 
         <section id="editor">
             <h2>Teste seu Código</h2>
-            <p>Clique no botão abaixo para abrir o ambiente interativo no JupyterLite:</p>
-            <a href="https://jupyterlite.github.io/demo/lab/index.html" target="_blank">
-                <button>Abrir JupyterLite</button>
-            </a>
+            <p>Clique no botão abaixo para abrir o Google Colab em uma nova janela dividindo a tela:</p>
+            <button onclick="abrirColab()">Abrir Google Colab</button>
         </section>
     </main>
-
 </body>
 </html>
