@@ -26,35 +26,8 @@
         </section>
     </main>
 
-    <!-- Carregando Pyodide versão corrigida -->
-    <script src="https://cdn.jsdelivr.net/npm/pyodide@0.22.1/pyodide.js"></script>
-    <script>
-        let pyodideReadyPromise;
-
-        async function loadPyodideAndRun() {
-            if (!pyodideReadyPromise) {
-                pyodideReadyPromise = loadPyodide();
-            }
-            let pyodide = await pyodideReadyPromise;
-            await pyodide.loadPackage(['pandas', 'matplotlib']);
-            return pyodide;
-        }
-
-        async function runPython() {
-            let code = document.getElementById("code-editor").value;
-            let outputElement = document.getElementById("output");
-
-            try {
-                let pyodide = await loadPyodideAndRun();
-                let output = await pyodide.runPythonAsync(code);
-                outputElement.textContent = output;
-            } catch (error) {
-                outputElement.textContent = "Erro ao executar o código: " + error;
-                console.error(error);
-            }
-        }
-
-        loadPyodideAndRun();
-    </script>
+    <!-- Carregando Pyodide versão correta -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/pyodide.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
