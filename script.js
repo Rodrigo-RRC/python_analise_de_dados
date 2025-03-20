@@ -1,12 +1,10 @@
-let pyodideReadyPromise;
+let pyodide;
 
 async function loadPyodideAndRun() {
-    if (!pyodideReadyPromise) {
-        pyodideReadyPromise = loadPyodide();
+    if (!pyodide) {
+        pyodide = await loadPyodide();
+        console.log("Pyodide carregado com sucesso!");
     }
-    let pyodide = await pyodideReadyPromise;
-    await pyodide.loadPackage(['pandas', 'matplotlib']);
-    return pyodide;
 }
 
 async function runPython() {
@@ -14,7 +12,9 @@ async function runPython() {
     let outputElement = document.getElementById("output");
 
     try {
-        let pyodide = await loadPyodideAndRun();
+        if (!pyodide) {
+            await loadPyodideAndRun();
+        }
         let output = await pyodide.runPythonAsync(code);
         outputElement.textContent = output;
     } catch (error) {
@@ -23,4 +23,7 @@ async function runPython() {
     }
 }
 
-loadPyodideAndRun();
+// Garante que Pyodide seja carregado ao iniciar a página
+window.onload = async function() {
+    await loadPyodideAndRun();
+};
