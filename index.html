@@ -20,14 +20,12 @@
 
         <section id="editor">
             <h2>Teste seu Código</h2>
-            <textarea id="code-editor" placeholder="Digite seu código Python aqui..."></textarea>
-            <button onclick="runPython()">Executar</button>
-            <pre id="output"></pre>
+            <p>Clique no botão abaixo para abrir o ambiente interativo no JupyterLite:</p>
+            <a href="https://jupyterlite.github.io/demo/lab/index.html" target="_blank">
+                <button>Abrir JupyterLite</button>
+            </a>
         </section>
     </main>
 
-    <!-- Carregando Pyodide corretamente -->
-    <script defer src="https://cdn.jsdelivr.net/npm/pyodide@0.22.1/pyodide.js"></script>
-    <script defer src="script.js"></script>
 </body>
 </html>
