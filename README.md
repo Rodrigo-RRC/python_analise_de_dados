@@ -23,4 +23,4 @@ Cada módulo contém:
 6. **Introdução ao Machine Learning**
 7. **Projetos Práticos e Dashboards**
 
-Acompanhe o repositório para novos módulos e atualizações! 🚀
+Acompanhe o repositório para novos módulos e atualizações!! 🚀
