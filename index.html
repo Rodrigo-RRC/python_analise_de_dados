@@ -26,11 +26,18 @@
         </section>
     </main>
 
+    <!-- Carregando Pyodide versão corrigida -->
     <script src="https://cdn.jsdelivr.net/npm/pyodide@0.22.1/pyodide.js"></script>
     <script>
+        let pyodideReadyPromise;
+
         async function loadPyodideAndRun() {
-            window.pyodide = await loadPyodide();
-            console.log("Pyodide carregado com sucesso!");
+            if (!pyodideReadyPromise) {
+                pyodideReadyPromise = loadPyodide();
+            }
+            let pyodide = await pyodideReadyPromise;
+            await pyodide.loadPackage(['pandas', 'matplotlib']);
+            return pyodide;
         }
 
         async function runPython() {
@@ -38,10 +45,8 @@
             let outputElement = document.getElementById("output");
 
             try {
-                if (!window.pyodide) {
-                    await loadPyodideAndRun();
-                }
-                let output = await window.pyodide.runPythonAsync(code);
+                let pyodide = await loadPyodideAndRun();
+                let output = await pyodide.runPythonAsync(code);
                 outputElement.textContent = output;
             } catch (error) {
                 outputElement.textContent = "Erro ao executar o código: " + error;
