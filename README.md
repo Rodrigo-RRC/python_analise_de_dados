@@ -14,7 +14,13 @@ Cada módulo contém:
 - `script.js` - Código JavaScript para interatividade.
 - `README.md` - Documentação completa do curso.
 
-## 🚀 Como Usar
-1. Clone este repositório para o seu computador:
-   ```bash
-   git clone https://github.com/Rodrigo-RRC/python_analise_de_dados.git
+## 📖 Módulos do Curso
+1. **Introdução à Análise de Dados**
+2. **Pandas: Manipulação de Dados**
+3. **Visualização de Dados**
+4. **Estatística Descritiva**
+5. **Análise Exploratória de Dados (EDA)**
+6. **Introdução ao Machine Learning**
+7. **Projetos Práticos e Dashboards**
+
+Acompanhe o repositório para novos módulos e atualizações! 🚀
