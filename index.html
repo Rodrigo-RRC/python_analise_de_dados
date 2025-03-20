@@ -26,8 +26,30 @@
         </section>
     </main>
 
-    <!-- Carregando Pyodide versão corrigida -->
     <script src="https://cdn.jsdelivr.net/npm/pyodide@0.22.1/pyodide.js"></script>
-    <script src="script.js"></script>
+    <script>
+        async function loadPyodideAndRun() {
+            window.pyodide = await loadPyodide();
+            console.log("Pyodide carregado com sucesso!");
+        }
+
+        async function runPython() {
+            let code = document.getElementById("code-editor").value;
+            let outputElement = document.getElementById("output");
+
+            try {
+                if (!window.pyodide) {
+                    await loadPyodideAndRun();
+                }
+                let output = await window.pyodide.runPythonAsync(code);
+                outputElement.textContent = output;
+            } catch (error) {
+                outputElement.textContent = "Erro ao executar o código: " + error;
+                console.error(error);
+            }
+        }
+
+        loadPyodideAndRun();
+    </script>
 </body>
 </html>
