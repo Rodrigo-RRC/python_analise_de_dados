@@ -5,6 +5,7 @@ async function loadPyodideAndRun() {
     if (!pyodideReady) {
         pyodide = await loadPyodide();
         pyodideReady = true;
+        console.log("Pyodide carregado com sucesso!");
     }
 }
 
@@ -19,9 +20,12 @@ async function runPython() {
         let output = pyodide.runPython(code);
         outputElement.textContent = output;
     } catch (error) {
-        outputElement.textContent = "Erro: " + error;
+        outputElement.textContent = "Erro ao executar o código: " + error;
+        console.error(error);
     }
 }
 
-// Carregar o Pyodide uma única vez ao iniciar a página
-loadPyodideAndRun();
+// Garante que o Pyodide carregue corretamente ao iniciar a página
+window.onload = async function() {
+    await loadPyodideAndRun();
+};
