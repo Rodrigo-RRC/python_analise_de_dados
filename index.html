@@ -7,16 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function abrirColab() {
-            let width = screen.width / 2;  // Divide a tela ao meio
+            let width = screen.width / 2;  
             let height = screen.height;
             let left = 0;
             let top = 0;
             
-            // Abrir Colab no lado direito
             let colabWindow = window.open("https://colab.research.google.com/", "_blank", 
                 `width=${width}, height=${height}, top=${top}, left=${screen.width - width}, resizable=yes, scrollbars=yes`);
             
-            // Ajustar a tela atual para ocupar o lado esquerdo (opcional)
             window.resizeTo(width, height);
             window.moveTo(left, top);
         }
@@ -28,4 +26,17 @@
         <p>Aprenda do básico ao avançado com teoria, exemplos e exercícios interativos!</p>
     </header>
 
-    <
+    <main>
+        <section id="introducao">
+            <h2>Módulo 1: Introdução à Análise de Dados</h2>
+            <p>Nesta seção, vamos aprender os fundamentos da Análise de Dados com Python e como manipular datasets usando Pandas.</p>
+        </section>
+
+        <section id="editor">
+            <h2>Teste seu Código</h2>
+            <p>Clique no botão abaixo para abrir o Google Colab em uma nova janela dividindo a tela:</p>
+            <button onclick="abrirColab()">Abrir Google Colab</button>
+        </section>
+    </main>
+</body>
+</html>
