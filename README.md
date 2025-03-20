@@ -17,4 +17,4 @@ Cada módulo contém:
 ## 🚀 Como Usar
 1. Clone este repositório para o seu computador:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Rodrigo-RRC/python_analise_de_dados.git
