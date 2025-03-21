@@ -1,6 +1,6 @@
 # 📊 Módulo 1 - Introdução à Análise de Dados com Python
 
-🔗 <a href="https://colab.research.google.com/drive/1d8PZD40HpAfgAQf_rvtMgiVZaxfy9-OZ" target="_blank">Acesse este módulo no Google Colab</a>
+🔗 [Acesse este módulo no Google Colab](https://colab.research.google.com/drive/1d8PZD40HpAfgAQf_rvtMgiVZaxfy9-OZ)
 
 
 ## 🔹 1. O que é Análise de Dados?
