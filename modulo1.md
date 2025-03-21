@@ -1,24 +1,27 @@
 # 📊 Módulo 1 - Introdução à Análise de Dados com Python
 
-https://colab.research.google.com/drive/1d8PZD40HpAfgAQf_rvtMgiVZaxfy9-OZ?usp=sharing
+🔗 **Acesse este módulo no Google Colab:** [Clique aqui](https://colab.research.google.com/drive/1d8PZD40HpAfgAQf_rvtMgiVZaxfy9-OZ?usp=sharing)
 
 ## 🔹 1. O que é Análise de Dados?
 A **Análise de Dados** é o processo de coletar, organizar e interpretar informações para extrair insights. No mundo atual, onde dados são gerados a todo momento, **saber analisar dados é essencial para tomar decisões estratégicas**.
 
 ## 🔹 2. Por que usar Python para Análise de Dados?
-Python é a linguagem mais utilizada para análise de dados por conta de:
-✅ Facilidade de uso e sintaxe simples  
-✅ Grande quantidade de bibliotecas como `pandas`, `numpy` e `matplotlib`  
-✅ Suporte para Machine Learning e Inteligência Artificial  
+Python é amplamente utilizado em Análise de Dados por conta de:
+✅ **Facilidade de uso e sintaxe simples**  
+✅ **Grande quantidade de bibliotecas poderosas como `pandas`, `numpy` e `matplotlib`**  
+✅ **Suporte para Machine Learning e Inteligência Artificial**  
+✅ **Comunidade ativa e vasto suporte técnico**  
 
 ## 🔹 3. Instalando as Ferramentas
-Antes de começar, precisamos instalar as bibliotecas essenciais. Execute o seguinte código no **Google Colab** ou no seu ambiente local:
+Antes de começar, precisamos garantir que todas as bibliotecas essenciais estejam instaladas. Execute o seguinte código no **Google Colab** ou no seu ambiente local:
 
 ```python
 !pip install pandas numpy matplotlib seaborn
 ```
 
-## 🔹 4. Primeiro Código com `pandas`
+---
+
+## 🔹 4. Trabalhando com `pandas`
 Agora, vamos importar as bibliotecas e carregar um pequeno conjunto de dados:
 
 ```python
@@ -26,7 +29,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+```
 
+---
+
+```python
 # Criando um DataFrame de exemplo
 dados = {
     'Nome': ['Ana', 'Bruno', 'Carlos', 'Daniela', 'Eduardo'],
@@ -37,6 +44,13 @@ dados = {
 df = pd.DataFrame(dados)
 print(df)
 ```
+
+#### **Explicação:**
+- **DataFrame**: Estrutura de dados do `pandas` similar a uma tabela do Excel ou a uma tabela SQL.
+- Criamos um dicionário (`dados`) e transformamos em um **DataFrame**.
+- `print(df)`: Exibe o DataFrame na tela.
+
+---
 
 ### **Saída esperada:**
 ```
@@ -60,23 +74,33 @@ plt.title('Salário por Pessoa')
 plt.show()
 ```
 
-🔹 **Isso cria um gráfico que mostra os salários de cada pessoa no dataset.**
+#### **Explicação:**
+- `plt.figure(figsize=(8,5))`: Define o tamanho da figura.
+- `sns.barplot(x='Nome', y='Salario', data=df, palette='viridis')`: Cria um gráfico de barras.
+- `plt.xlabel('Nome')`: Define o nome do eixo X.
+- `plt.ylabel('Salário')`: Define o nome do eixo Y.
+- `plt.title('Salário por Pessoa')`: Define o título do gráfico.
+
+---
 
 ## 🔹 6. Exercícios Práticos
-### **1️⃣ Filtrando Dados**
-Filtre todas as pessoas que ganham mais de R$4000:
+Agora é sua vez! Resolva os exercícios abaixo:
+
+**1️⃣ Filtrar todas as pessoas que ganham mais de R$4000:**
 ```python
 # Seu código aqui
 ```
 
-### **2️⃣ Adicionando uma Nova Coluna**
-Crie uma nova coluna chamada **"Categoria"**, que classifique os salários como "Baixo", "Médio" ou "Alto".
+---
+
+**2️⃣ Adicionar uma coluna chamada `Categoria`, que classifica os salários como "Baixo", "Médio" ou "Alto".**
 ```python
 # Seu código aqui
 ```
 
-### **3️⃣ Gerando um Gráfico de Dispersão**
-Crie um gráfico de dispersão mostrando a relação entre **Idade** e **Salário**:
+---
+
+**3️⃣ Criar um gráfico de dispersão mostrando a relação entre `Idade` e `Salário`.**
 ```python
 # Seu código aqui
 ```
