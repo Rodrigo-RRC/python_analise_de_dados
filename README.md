@@ -13,9 +13,10 @@ Cada módulo contém:
 - `style.css` - Arquivo de estilos para o site.
 - `script.js` - Código JavaScript para interatividade.
 - `README.md` - Documentação completa do curso.
+- `modulo1.md` - Primeiro módulo do curso.
 
 ## 📖 Módulos do Curso
-1. **Introdução à Análise de Dados**
+1. **[Introdução à Análise de Dados](modulo1.md)**
 2. **Pandas: Manipulação de Dados**
 3. **Visualização de Dados**
 4. **Estatística Descritiva**
