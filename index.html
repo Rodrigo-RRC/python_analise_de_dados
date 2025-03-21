@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Análise de Dados com Python</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function abrirColab() {
-            let width = screen.width / 2;  
-            let height = screen.height;
-            let left = 0;
-            let top = 0;
-            
-            let colabWindow = window.open("https://colab.research.google.com/", "_blank", 
-                `width=${width}, height=${height}, top=${top}, left=${screen.width - width}, resizable=yes, scrollbars=yes`);
-            
-            window.resizeTo(width, height);
-            window.moveTo(left, top);
+    <title>Curso de Análise de Dados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
         }
-    </script>
+        iframe {
+            width: 90%;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Curso de Análise de Dados com Python</h1>
-        <p>Aprenda do básico ao avançado com teoria, exemplos e exercícios interativos!</p>
-    </header>
+    <h1>Curso de Análise de Dados com Python</h1>
+    <p>Leia a teoria e execute o código diretamente no Google Colab.</p>
 
-    <main>
-        <section id="introducao">
-            <h2>Módulo 1: Introdução à Análise de Dados</h2>
-            <p>Nesta seção, vamos aprender os fundamentos da Análise de Dados com Python e como manipular datasets usando Pandas.</p>
-        </section>
+    <!-- Botão para carregar o Colab dentro do iframe -->
+    <button onclick="carregarColab()">Abrir Google Colab</button>
 
-        <section id="editor">
-            <h2>Teste seu Código</h2>
-            <p>Clique no botão abaixo para abrir o Google Colab em uma nova janela dividindo a tela:</p>
-            <button onclick="abrirColab()">Abrir Google Colab</button>
-        </section>
-    </main>
+    <iframe id="colabFrame" style="display:none;"></iframe>
+
+    <script>
+        function carregarColab() {
+            let iframe = document.getElementById("colabFrame");
+            iframe.src = "https://colab.research.google.com/drive/1d8PZD40HpAfgAQf_rvtMgiVZaxfy9-OZ";
+            iframe.style.display = "block";
+        }
+    </script>
 </body>
 </html>
