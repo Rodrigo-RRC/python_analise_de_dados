@@ -1,6 +1,7 @@
 # 📊 Módulo 1 - Introdução à Análise de Dados com Python
 
-🔗 [Acesse este módulo no Google Colab](https://colab.research.google.com/drive/1d8PZD40HpAfgAQf_rvtMgiVZaxfy9-OZ){:target="_blank"}
+🔗 <a href="https://colab.research.google.com/drive/1d8PZD40HpAfgAQf_rvtMgiVZaxfy9-OZ" target="_blank">Acesse este módulo no Google Colab</a>
+
 
 ## 🔹 1. O que é Análise de Dados?
 A **Análise de Dados** é o processo de coletar, organizar e interpretar informações para extrair insights. No mundo atual, onde dados são gerados a todo momento, **saber analisar dados é essencial para tomar decisões estratégicas**.
