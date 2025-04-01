@@ -24,4 +24,11 @@ Cada módulo contém:
 6. **Introdução ao Machine Learning**
 7. **Projetos Práticos e Dashboards**
 
+<p align="center">
+  <a href="https://rodrigo-rrc.github.io/Projetos_BI/" target="_blank">
+    <img src="https://img.shields.io/badge/⬅️ Voltar para o índice interativo-blue?style=for-the-badge" alt="Voltar para o índice interativo"/>
+  </a>
+</p>
+
+
 Acompanhe o repositório para novos módulos e atualizações!! 🚀
