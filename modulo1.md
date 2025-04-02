@@ -8,6 +8,7 @@ A **Análise de Dados** é o processo de coletar, organizar e interpretar inform
 
 ## 🔹 2. Por que usar Python para Análise de Dados?
 Python é amplamente utilizado em Análise de Dados por conta de:
+
 ✅ **Facilidade de uso e sintaxe simples**  
 ✅ **Grande quantidade de bibliotecas poderosas como `pandas`, `numpy` e `matplotlib`**  
 ✅ **Suporte para Machine Learning e Inteligência Artificial**  
